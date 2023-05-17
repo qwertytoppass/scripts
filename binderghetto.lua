@@ -15,7 +15,7 @@ local script_vers_text = "1.00"
 local update_url = "https://raw.githubusercontent.com/qwertytoppass/scripts/main/update.ini"
 local update_path = getWorkingDirectory() .. "/update.ini"
 
-local script_url = ""
+local script_url = "https://raw.githubusercontent.com/qwertytoppass/scripts/main/binderghetto.lua"
 local script_path = thisScript().path
 
 function main()
@@ -33,7 +33,7 @@ function main()
 		end
 	end)
 
-	sampAddChatMessage("{FFFFFF}[INFO]: {228B22}Срипт загружен. {FFFFFF} Его автор: {808000}Ебырь мамы Романика голд",)
+	sampAddChatMessage("{FFFFFF}[INFO]: {228B22}Срипт загружен. {FFFFFF} Его автор: {808000}Ебырь мамы Романика голд")
 	sampAddChatMessage("{FFFFFF}[INFO]: {006400}Романик голд сын проститутки.")
 	print("Скрипт загружен. Автор:"..script_author)
 
@@ -41,8 +41,11 @@ function main()
 		if update_state then
 			downloadUrlToFile(script_url, script_path, function(id, status)
 				if status == dlstatus.STATUS_ENDDOWNLOADDATA then
+				sampAddChatMessage('Скрипт успешно обновлен!', -1)
+				thisScript():reload()
 			end
 		end)
+		break
 	end
 		if isKeyDown(VK_F) and isKeyJustPressed(VK_RBUTTON) then
 			RunC(50)
