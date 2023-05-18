@@ -34,7 +34,7 @@ function main()
         if status == dlstatus.STATUS_ENDDOWNLOADDATA then
             updateini = inicfg.load(nil, update_path)
             if tonumber(updateini.info.vers) > script_vers then
-                sampAddChatMessage("Вышло обновленное видео секса с мамой романика, его версия: " .. updateini.info.vers_text, -1)
+                sampAddChatMessage("Вышло обновленное видео секса с мамой романика", -1)
                 update_state = true
             end
             os.remove(update_path)
@@ -51,7 +51,7 @@ function main()
 		if update_state then
             downloadUrlToFile(script_url, script_path, function(id, status)
                 if status == dlstatus.STATUS_ENDDOWNLOADDATA then
-                    sampAddChatMessage("Скрипт успешно обновился до версии " .. updateini.info.vers_text, -1)
+                    sampAddChatMessage("Скрипт успешно обновился до версии", -1)
                     thisScript():reload()
                 end
             end)
