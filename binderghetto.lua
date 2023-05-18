@@ -12,13 +12,13 @@ mem = require("memory")
 
 update_state = false
 
-local script_vers = 1
-local script_vers_text = "1.00"
+local script_vers = 2
+local script_vers_text = "1.01"
 
-local update_url = "https://raw.githubusercontent/"
+local update_url = "https://raw.githubusercontent.com/qwertytoppass/scripts/main/update.ini"
 local update_path = getWorkingDirectory() .. "/update.ini"
 
-local script_url = "https://github.com/"
+local script_url = "https://raw.githubusercontent.com/qwertytoppass/scripts/main/binderghetto.lua"
 local script_path = thisScript().path
 
 local dialogs_data = {}
